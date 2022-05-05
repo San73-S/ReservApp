@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matilda Restaurante</title>
+    <!-- <link rel="stylesheet" href="css/Login.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container logo-nav-container">
+            <img src="img/logo.png" alt="logo" class="logo">
+            <nav  th:replace="/fragments/navbar :: nav">
+                
+                 <!--    <ul>
+                 
+                    <li><a th:href="@{/usuario/registrar}"><img src="img/iniciarsesion.png" class="iniciarsesion">Cuenta</a></li>
+                    
+                    <li><a th:href="@{/menu/agregar}"><img src="img/carrito.png" class="carrito">Agregar comida</a></li>
+                    
+                    <li><a th:href="@{/menu/carta}"><img src="img/menu.png" class="menu">Menú</a></li>
+                    <li><a href="/reserva"><img src="img/reserva.png" class="reserva">Reserva</a></li>
+                </ul>-->
+            </nav>
+        </div>
+
+        <video preload="auto" autoplay muted loop>
+            <source src="img/banner.mp4" type="video/mp4">
+        </video>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h1>Bienvenidos</h1>
+
+            <p>Alegrar corazones por intermedio de nuestra comida es nuestro propósito de vida.</p>
+            <p>Matilda es un emprendimiento familiar, que nace a raíz de las ganas de hacer algo en conjunto.
+                El ambiente que brindamos a nuestros clientes es cálido, familiar y muy ameno. Nos gusta que quien venga a gozar de nuestro espacio se vaya contento y con sus expectativas cumplidas.</p>
+            <p>Nuestro nombre fue elegido en honor a Matilda Joslyn Gage, una científica a la que nunca reconocieron por su trabajo e investigación por haber nacido mujer. Gracias a ella surgió un Movimiento llamado “No More Matildas” cuyo objetivo es que no haya más mujeres en el ámbito de la ciencia (y en ninguna otra profesión) que no sean distinguidas por su labor solo por el “hecho de no ser hombres”.Los nombres de los platos tienen mucho que ver con este reconocimiento hacia las mujeres que lucharon por cambiar el mundo.</p>
+            <p>Nuestra carta cuenta con una amplia variedad de platos, para todo tipo de gustos.
+                Vení a conocernos, te esperamos cuando gustes!!!</p>
+    </main>
+
+
+
+
+    <footer>
+
+        <div class="contenedore">
+
+            <div class="contenedora">
+
+                <div class="InfoPersonal">
+                    <div>
+                        <p class="iconose"> <img src="img/llamada-telefonica.png"> 03548 49-7882 </p> <a class="iconose"
+                            href=" https://api.whatsapp.com/send?phone=543548581138&app=facebook&entry_point=page_cta">
+                            <img src="img/whatsapp.png"> Escribe a nuestro Whatsapp</a>
+                    </div>
+                    <div>
+                        <p class="iconose"> <img src="img/correo-electronico.png"> Matildarestaurante@gmail.com </p>
+                    </div>
+
+                    <div class="sep"> <a class="icon" href="https://m.facebook.com/matilda.restobar/"> <img
+                                src="img/facebook.png">
+                            ¡Hazte fan!</a> <br>
+                    </div>
+
+                    <div>
+                        <a class="icon" href="https://www.instagram.com/matilda.restobar/"> <img
+                                src="img/instagram.png">
+                            ¡Hazte fan!</a> <br>
+                    </div>
+                </div>
+            </div>
+            <div class="horario">
+                <p> Lunes a viernes 9:00 a 22:00 <br> sábado domingo y feriados 9:00 a 01:00 </p>
+            </div>
+
+
+            <div class="map">
+                <div class="mapi">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.3226553667214!2d-64.48419718493281!3d-31.045116081529287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d8538e0879c7f%3A0x7377815bcc67ffb0!2sMatilda%20Resto-Bar!5e0!3m2!1ses-419!2sar!4v1650922324530!5m2!1ses-419!2sar"
+                        width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>"
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="login.js"></script>
+</body>
+
+</html>

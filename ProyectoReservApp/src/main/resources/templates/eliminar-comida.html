@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/StylesEliminar.css">
+    <title>Comidas</title>
+</head>
+
+<body>
+    <div class="contenedorBarra">
+        <!-- NUEVO -->
+        <nav class="contenedorPrincipal">
+            <ul>
+                 <li><a th:href="@{/}">Inicio</a> </li>
+                <li><a th:href="@{/menu/agregar}">Agregar comida</a></li>
+                <li><a th:href="@{/menu/carta}">Menú</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="conPrinci">
+        <div class="volver"  >
+                <header class="titulo row justify-content-center">  <h3> Modificaciones</h3>   </header>
+               
+                <table class="table  mt-5">
+                    <thead>
+                    <tr>
+                        
+                        <th id="caja"> Titulo</th>
+                        <th class="cajas"> Valor </th>
+                        <th class="caja"> Categoria </th>
+                        <th id="caja"> Ingredientes</th>
+                        <th class="caja"> Foto </th>
+                        <th class="cajas"> Editar </th>
+                        <th class="cajas"> Eliminar</th>
+                                           
+                    </tr>
+                </thead>
+
+                <tbody th:each="com : ${comidas}">
+                    <div>
+                        <tr> 
+                            <td  class="tr" th:text="${com.nombre}"></td>
+                            <td class="tr" th:text="${com.precio}"></td>
+                            <td class="tr" th:text="${com.tipo}"></td>
+                            <td class="tr" th:text="${com.ingredientes}"></td>   
+                            <td class="tr trimg" ><img class="img" th:src="${'/foto/menu?id=' + com.id} " alt=""></td>
+                           
+                            <div class="titulo mx-sm-5 pb-2">
+                            <td class="tr">
+                                <a th:href="@{/menu/modificar/__${com.id}__}" class="btn btn-block gen"> Editar </a>
+                            </td>
+                            <td class="tr">
+                                <a th:href="@{/menu/eliminar/__${com.id}__}" class="btn btn-block gen"> Eliminar </a>
+                            </td>
+                            </div>
+                            
+                        </tr>
+                        </div>
+
+                </tbody>                
+                </table>
+                <a th:href="@{/}" class="btn btn-block gen" > Volver </a>        
+            </div> 
+                           
+        </div>     
+ </body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/menu2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Libre+Baskerville:ital@1&display=swap"
+        rel="stylesheet">
+    <title>Menú</title>
+</head>
+
+<body>
+
+    <div class="contenedorPrincipal">
+
+        <div class="contenedorMenu" id="Mcomidas">
+
+            <div class="barra">
+                <div><a th:href="@{/}">Inicio</a></div> <!-- ENLACE PARA IR A INICIO -->
+                <div><a href="/reserva">Reservá</a></div> <!-- ENLACE PARA IR A RESERVAR -->
+            </div>
+
+            <div class="bienvenida">
+                <h3>Bienvenido!</h3>
+                <p>En esta sección podras ver nuestro menú de comidas. <br> <br> Haciendo 'click' en nuestra carta, te llevará a lo que buscas!!</p>
+            </div>
+
+
+            <div class="menu">
+
+                <div class="hamburguesa estilos">
+                    <a href="#listaH" ><img src="/img/foto14.jpg" alt=""></a>
+                    <p>Hamburguesas</p>
+                </div>
+
+                <div class="pizza estilos">
+                    <a href="#listaP"><img src="/img/foto13.jpg" alt=""></a>
+                    <p>Pizzas</p>
+                </div>
+
+                <div class="pastas estilos">
+                    <a href="#listaPas"><img src="/img/foto8.jpg" alt=""></a>
+                    <p>Pastas</p>
+                </div>
+
+                <div class="carta">
+                    <h2> - Nuestra Carta -</h2>
+                </div>
+
+                <div class="ensaladas estilos">
+                    <a href="#listaE"><img src="/img/foto12.jpg" alt=""></a>
+                    <p>Ensaladas</p>
+                </div>
+
+                <div class="postres estilos">
+                    <a href="#listaPos"><img src="/img/foto9.jpg" alt=""></a>
+                    <p>Postres</p>
+                </div>
+
+                <div class="bebidas estilos">
+                    <a href="#listaB"><img src="/img/foto10.jpg" alt=""></a>
+                    <p>Bebidas</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- COMIENZO DEL MENU DE COMIDAS --> 
+
+        <div class="barraVolver" id="flecha"> <!-- FLECHA NO HACER NADA ACÁ-->           
+             <a href="#Mcomidas"><img src="/img/flecha2.png" alt=""></a>  <!-- onclick="subirOcultar()" -->
+        </div>
+
+        <div class="comidas">            
+            <!-- -----------COMIENZA EL MENU DE HAMBURGUESAS---------- -->
+
+            <div class="listaHam">
+                <h2 id="listaH"> - Hamburguesas -</h2>
+            </div>
+            
+
+            <div class="tabla">
+                <table th:each="com : ${comidas}" >
+                    <tr  th:if="${com.tipo == 'hamburguesa'}">
+                        <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
+                        <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
+                        <td>
+                            <label for="">Precio: $<span th:text="${com.precio}"></span></label><!--ADENTRO DEL SPAN VA EL PRECIO -->
+                        </td>                        
+                    </tr>     
+                </table> 
+
+            </div>
+            <!-- -----------FIN EL MENU DE HAMBURGUESAS   th:if="${com.tipo == 'hamburguesas'}"---------- -->
+
+            
+
+            <!-- -----------COMIENZA EL MENU DE PIZZAS---------- -->
+            <div class="listaHam">
+                <h2 id="listaP"> - Pizzas -</h2>
+            </div>
+
+            <div class="tabla">
+                <table th:each="com : ${comidas}" >
+                    <tr  th:if="${com.tipo == 'pizza'}">
+                        <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
+                        <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
+                        <td>
+                            <label for="">Precio: $<span th:text="${com.precio}"></span></label><!--ADENTRO DEL SPAN VA EL PRECIO -->
+                        </td>                        
+                    </tr>     
+                </table> 
+
+            </div>
+
+            <!-- -----------FIN EL MENU DE PIZZAS---------- -->
+
+            <!-- -----------COMIENZA EL MENU DE PASTAS---------- -->
+            <div class="listaHam">
+                <h2 id="listaPas">- Pastas -</h2>
+            </div>
+
+            <div class="tabla">
+                <table th:each="com : ${comidas}" >
+                    <tr  th:if="${com.tipo == 'pastas'}">
+                        <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
+                        <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
+                        <td>
+                            <label for="">Precio: $<span th:text="${com.precio}"></span></label><!--ADENTRO DEL SPAN VA EL PRECIO -->
+                        </td>                        
+                    </tr>     
+                </table> 
+
+            </div>
+
+            <!-- -----------FIN EL MENU DE PASTAS---------- -->
+
+            <!-- -----------COMIENZA EL MENU DE ENSALADAS---------- -->
+            <div class="listaHam">
+                <h2 id="listaE">- Ensaladas -</h2>
+            </div>
+
+            <div class="tabla">
+               <table th:each="com : ${comidas}" >
+                    <tr  th:if="${com.tipo == 'ensaladas'}">
+                        <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
+                        <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
+                        <td>
+                            <label for="">Precio: $<span th:text="${com.precio}"></span></label><!--ADENTRO DEL SPAN VA EL PRECIO -->
+                        </td>                        
+                    </tr>     
+                </table> 
+
+            </div>
+
+            <!-- -----------FIN EL MENU DE ENSALADAS---------- -->
+
+            <!-- -----------COMIENZA EL MENU DE POSTRES---------- -->
+            <div class="listaHam">
+                <h2 id="listaPos">- Postres -</h2>
+            </div>
+
+            <div class="tabla">
+                <table th:each="com : ${comidas}" >
+                    <tr  th:if="${com.tipo == 'postres'}">
+                        <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
+                        <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
+                        <td>
+                            <label for="">Precio: $<span th:text="${com.precio}"></span></label><!--ADENTRO DEL SPAN VA EL PRECIO -->
+                        </td>                        
+                    </tr>     
+                </table> 
+
+            </div>
+
+            <!-- -----------FIN EL MENU DE POSTRES---------- -->
+
+            <!-- -----------COMIENZA EL MENU DE BEBIDAS---------- -->
+            <div class="listaHam">
+                <h2 id="listaB"> - Bebidas -</h2>
+            </div>
+
+            <div class="tabla">
+                <table th:each="com : ${comidas}" >
+                    <tr  th:if="${com.tipo == 'bebidas'}">
+                        <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
+                        <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
+                        <td>
+                            <label for="">Precio: $<span th:text="${com.precio}"></span></label><!--ADENTRO DEL SPAN VA EL PRECIO -->
+                        </td>                        
+                    </tr>     
+                </table> 
+
+            </div>
+
+            <!-- -----------FIN EL MENU DE POSTRES---------- -->
+
+        </div>
+    </div>
+
+
+</body>
+</html>

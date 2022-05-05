@@ -1,0 +1,28 @@
+<nav class="navigation" >
+    <ul>        
+        <li sec:authorize="!hasAnyRole('ADMIN','USER')">
+            <a th:href="@{/usuario/registrar}"><img src="img/iniciarsesion.png" class="iniciarsesion">Cuenta</a>
+        </li>   
+        <li sec:authorize="hasAnyRole('ADMIN','USER')">
+              <a th:href="@{/menu/carta}"><img src="img/menu.png" class="menu">Menú</a>
+        </li>   
+        <li sec:authorize="hasAnyRole('ADMIN','USER')">
+              <a href="/reserva"><img src="img/reserva.png" class="reserva">Reserva</a>
+        </li> 
+        
+        <li sec:authorize="!hasAnyRole('ADMIN','USER')">
+              <a th:href="@{/menu/carta}"><img src="img/menu.png" class="menu">Menú</a>
+        </li>   
+        <li sec:authorize="!hasAnyRole('ADMIN','USER')">
+              <a href="/reserva"><img src="img/reserva.png" class="reserva">Reserva</a>
+        </li> 
+        
+       
+         <li sec:authorize="hasRole('ADMIN')">
+            <a th:href="@{/menu/agregar}"><img src="img/carrito.png" class="carrito">Agregar comida</a>
+        </li> 
+        <li sec:authorize="isAuthenticated()">
+            <a th:href="@{/logout}"><img src="img/log-out.png" class="reserva">Salir</a>
+        </li>   
+    </ul>
+</nav>  
