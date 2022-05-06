@@ -30,7 +30,8 @@ public class UsuarioController {
         }
         if(Exito != null){
             model.put("Exito","Registrado exitosamente.");
-        }    
+        }  
+        
         if (logout != null) {
             model.put("logout","Desconectado correctamente");
         }
@@ -43,7 +44,8 @@ public class UsuarioController {
             ServUs.save(Nombre, Email, Clave1, Clave2);            
              return "redirect:/usuario/ingreso?Exito";
         } catch (Exception ex) {
-            Model.put("RgError", ex.getMessage());   
+            Model.put("RgError", ex.getMessage());  
+            Model.put("noExito", "Registro Fallido.");  
             return "login";
         }
     }
