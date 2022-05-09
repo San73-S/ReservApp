@@ -155,7 +155,7 @@ background-color: #ffffffe5
 .lugar img:hover{
     transform: scale(2,2);
     
-}
+    }
 
 .contenedora {
  margin-bottom: 50px;
@@ -175,7 +175,7 @@ color: black;
     box-shadow:#ffffffe5;
 }
 .mapi {
-        margin-top: 10px;
+  margin-top: 10px;
 }
 
 .horario {
