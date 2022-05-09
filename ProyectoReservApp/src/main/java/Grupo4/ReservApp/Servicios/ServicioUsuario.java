@@ -29,11 +29,11 @@ public class ServicioUsuario implements UserDetailsService {
     public void validar(String Nombre, String email, String password, String password2) throws Exception {
 
         if (Nombre == null || Nombre.isEmpty()) {
-            throw new Exception("Nombre inválido.");
+            throw new Exception("Nombre incorrecto.");
         }
 
         if (email == null || email.isEmpty()) {
-            throw new Exception("Email inválido.");
+            throw new Exception("Email incorrecto.");
         }
         
         /*VERIFICACION DE TODOS LOS EMAIL*/
@@ -43,8 +43,9 @@ public class ServicioUsuario implements UserDetailsService {
         }
         
         if (password == null || password.isEmpty() || password.length() < 5) {
-            throw new Exception("Contraseña inválida.");
+            throw new Exception("Contraseña incorrecta.");
         }
+        
         if (!password.equals(password2) )  {
             throw new Exception("Las contraseñas no pueden ser distintas.");
         }
@@ -58,7 +59,7 @@ public class ServicioUsuario implements UserDetailsService {
         entidad.setEmail(email);
         String pwEncriptada = new BCryptPasswordEncoder().encode(password);
         entidad.setPassword(pwEncriptada);
-        entidad.setRole(Role.ADMIN);
+        entidad.setRole(Role.USER);
         return usRepositorio.save(entidad);
     }
     
