@@ -92,14 +92,23 @@
             
 
             <div class="tabla">
-                <table th:each="com : ${comidas}" >
-                    <tr  th:if="${com.tipo == 'hamburguesa'}">
-                        <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
-                        <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
+               <!--  <table  th:each="com : ${comidas}">
+                   <tr  th:if="${com.tipo == 'hamburguesa'}">
+                        <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> 
+                        <th th:text="${com.nombre}"></th> 
                         <td>
-                            <label for="">Precio: $<span th:text="${com.precio}"></span></label><!--ADENTRO DEL SPAN VA EL PRECIO -->
+                            <label for="">Precio: $<span th:text="${com.precio}"></span></label>
                         </td>                        
-                    </tr>     
+                    </tr> --> 
+                    
+              <table>
+                    <tr th:each="com : ${comidas}" th:if="${com.tipo == 'hamburguesa'}">   
+                        <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td>
+                        <th th:text="${com.nombre}"></th> 
+                        <td>
+                            <label for="">Precio: $<span th:text="${com.precio}"></span></label>
+                        </td>
+                    </tr>                    
                 </table> 
 
             </div>
@@ -113,8 +122,8 @@
             </div>
 
             <div class="tabla">
-                <table th:each="com : ${comidas}" >
-                    <tr  th:if="${com.tipo == 'pizza'}">
+                <table>
+                    <tr  th:each="com : ${comidas}" th:if="${com.tipo == 'pizza'}">
                         <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
                         <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
                         <td>
@@ -133,8 +142,8 @@
             </div>
 
             <div class="tabla">
-                <table th:each="com : ${comidas}" >
-                    <tr  th:if="${com.tipo == 'pastas'}">
+                <table>
+                    <tr th:each="com : ${comidas}" th:if="${com.tipo == 'pastas'}">
                         <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
                         <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
                         <td>
@@ -153,8 +162,8 @@
             </div>
 
             <div class="tabla">
-               <table th:each="com : ${comidas}" >
-                    <tr  th:if="${com.tipo == 'ensaladas'}">
+               <table>
+                    <tr th:each="com : ${comidas}" th:if="${com.tipo == 'ensaladas'}">
                         <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
                         <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
                         <td>
@@ -173,8 +182,8 @@
             </div>
 
             <div class="tabla">
-                <table th:each="com : ${comidas}" >
-                    <tr  th:if="${com.tipo == 'postres'}">
+                <table>
+                    <tr th:each="com : ${comidas}" th:if="${com.tipo == 'postres'}">
                         <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
                         <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
                         <td>
@@ -193,8 +202,8 @@
             </div>
 
             <div class="tabla">
-                <table th:each="com : ${comidas}" >
-                    <tr  th:if="${com.tipo == 'bebidas'}">
+                <table>
+                    <tr th:each="com : ${comidas}" th:if="${com.tipo == 'bebidas'}">
                         <td><img th:src="${'/foto/menu?id=' + com.id} " alt=""></td> <!--FOTO --> 
                         <th th:text="${com.nombre}"></th> <!--NOMBRE DE LA COMIDA -->
                         <td>
