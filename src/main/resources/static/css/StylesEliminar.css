@@ -1,0 +1,145 @@
+@font-face {
+    font-family: BEBAS;
+    src: url(../img/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: Kalam;
+    src: url(../img/Kalam-Regular.ttf);
+}
+
+body {
+    background: url(../img/FONDO.png);
+    background-size: 50%;
+    background-repeat: repeat-y;
+    background-color: #fffeec;
+}
+.contenedorBarra{ /*NUEVO*/
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorPrincipal{ /*NUEVO*/
+    position: absolute;
+    width: 40%;
+    height: 30px;
+    background-color: #de969e;
+    box-shadow: 0px 0px 10px rgba(46, 46, 46, 0.504);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 100px;
+}
+
+.contenedorPrincipal  ul li{ /*NUEVO*/
+    display: inline-block;   
+    padding: 0 20px; 
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+.contenedorPrincipal  ul li a{ /*NUEVO*/
+    text-decoration: none;
+    color: rgb(191, 50, 84);
+    font-family: BEBAS;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.contenedorPrincipal ul li:hover{ /*NUEVO*/
+    background-color: #ffffffe5;
+}
+
+/*Bar*/
+
+.conPrinci{
+    margin-top: 100px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color:rgba(222, 150, 159, 0.678);
+    font-family: Kalam;
+    text-align: center;
+    border-radius: 50px; 
+    letter-spacing: 2px;
+}
+.tr{
+   
+}
+.table tr{
+border-bottom:5px solid rgb(191, 50, 84);
+background-color:#de969e;
+}
+.trimg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table{
+   
+ 
+}
+.img{
+    width: 100px;   
+ }
+
+.caja{
+    width: 180px;
+    height: 20px;
+}
+
+#caja{
+    width: 350px;
+    height: 50px;
+}
+.cajas{
+    width: 50px;
+    height: 20px;
+}
+.titulo{
+    font-size: 30px;
+    font-family:Kalam;
+    letter-spacing: 2PX;
+}
+   .gen{ 
+    border: 1px solid white; 
+    background-color:rgb(191, 50, 84);
+    padding: 8px;
+    font-size: 15px;
+    color: white;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-family: BEBAS; 
+    }
+
+    .gen:hover{
+    color: rgba(222, 150, 159, 0.678);   
+ } 
+ 
+  .foto{
+    border: 1px solid black; 
+    background-color:rgb(191, 50, 84);
+    padding: 8px;
+    font-size: 15px;
+    color: black;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-family: BEBAS; 
+ }
+ .foto:hover{
+    color: rgba(222, 150, 159, 0.678);  
+ }
+ #file{
+     display: none;
+ }
+ .category{
+     background-color: rgb(191, 50, 84) ;
+     color: white;
+ }
