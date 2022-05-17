@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reservation Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/reserva.css">
+    </head>
+    <body>
+
+        <div class="contenedorBarra">
+            <nav class="contenedorPrincipal">
+                <ul>
+                    <li><a href="/">Inicio</a> </li>
+                    <li><a href="/menu">Menú</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class = "banner">
+            <h2>RESERVA TU MESA AHORA</h2>
+            <div class = "card-container">
+                <div class = "card-img">
+
+                </div>
+
+                <div class = "card-content">
+                    <h3>RESERVACIÓN</h3>
+                    
+                    <form th:action="@{/reserva}" method="POST">
+                        
+                        <div class = "form-row saludo">
+                            <p type="text" th:text="|Hola, ${usuario.nombre}!|"></p>                            
+                        </div>
+                        <div class = "form-row">
+                            <input required type="date" name="dia" th:attr="min=${now}">
+
+                            <select required name = "turno">
+                                <option value = "">Turno</option>
+                                <option value = "ALMUERZO">Almuerzo</option>
+                                <option value = "CENA">Cena</option>
+                            </select>
+                        </div>
+                        <div class = "form-row">
+                            <input type = "submit" value = "CONFIRMAR">
+                        </div>                        
+                        <div class="form-row msjError">  
+                            <p th:if="${reservError != null}" th:text="|Error: ${reservError}|"></p>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>

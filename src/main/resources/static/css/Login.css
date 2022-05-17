@@ -1,0 +1,541 @@
+
+@font-face {
+    font-family: BEBAS;
+    src: url(../img/BebasNeue-Regular.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*NUEVO*/
+body {
+    background: url(../img/FONDO.png);
+    background-size: 50%;
+    background-repeat: repeat-y;
+    background-color: #fffeec;
+}
+
+
+/*INICIO POSICIONAMIENTO DE CONTENEDORES*/
+
+/*NUEVO*/
+
+.contenedorBarra{ /*NUEVO*/
+    position:absolute;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorPrincipal{ /*NUEVO*/
+    position: absolute;
+    width: 50%;
+    height: 50px;
+    background-color: #de969e;
+    box-shadow: 0px 0px 10px rgba(46, 46, 46, 0.504);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    border-radius: 0 0 10px 10px;
+}
+
+.contenedorPrincipal  ul li{ /*NUEVO*/
+    display: inline-block;   
+    padding: 0 20px; 
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+.contenedorPrincipal  ul li a{ /*NUEVO*/
+    text-decoration: none;
+    color: rgb(191, 50, 84);
+    font-family: BEBAS;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.contenedorPrincipal ul li:hover{ /*NUEVO*/
+    background-color: #ffffffe5;
+}
+
+.contenedor{   
+    position: absolute; /*NUEVO*/
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center; 
+      
+}
+
+.contenedor-login{
+    display: grid;
+    width: 755px;
+    height: 400px;
+    grid-template-rows: .25fr .25fr repeat(6, .5fr) .25fr .25fr;
+    grid-template-columns: repeat(12, .5fr);
+    background-color: white ;
+    /*#F5F5F5 #F2F8F6*/
+    outline: 1px solid;
+    border-radius: 25px;  
+    box-shadow: 0px 0px 10px rgba(46, 46, 46, 0.504);  
+}
+
+.contenedor-img{
+    grid-column: 1 / span 6;
+    grid-row: 1/ span 10;
+    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1,
+     #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    background: rgb(244,241,222);
+    background: linear-gradient(45deg, rgba(244,241,222,1) 0%, rgba(224,122,95,1) 81%, 
+    rgba(188,75,81,1) 100%);
+    border-radius: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.contenedor-img img{
+    border-radius: 25px;
+    width: 30%;
+}
+
+
+.contenedor-botones{
+    grid-column: 8/  12;
+    grid-row: 2/ 4;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0px 0px 15px rgb(197, 225, 226);
+    display: grid;
+    grid-template-rows: .35fr .15fr .25fr;
+    grid-template-columns: repeat(4, 5fr);
+    align-items: center;
+}
+
+/* .contenedor .cerrar{
+    grid-column: 12;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.contenedor-ingreso{
+    grid-column: 8/  12;
+    grid-row: 3 /  9;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgb(197, 225, 226);
+    /* display: grid;
+    grid-template-rows: repeat(12, .25fr);
+    grid-template-columns: repeat(8, .25fr); */
+}
+
+.contenedor-registro{
+    grid-column: 8/  12;
+    grid-row: 3 /  9;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0px 5px 15px rgb(197, 225, 226);
+    display: none;
+}
+
+/*FIN POSICIONAMIENTO DE CONTENEDORES*/
+
+/*INICIO POSICIONAMIENTO DE BOTONES*/
+
+.contenedor-botones > ul{
+   list-style: none;
+}
+
+.contenedor-botones > ul > li > button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+} 
+
+.gris{
+    color: rgb(133, 133, 133);
+}
+
+.negro{
+    color: black;
+}
+
+.contenedor-botones ul:first-child{
+    text-align: center;
+    grid-column: 1/ span 2;
+}
+
+.contenedor-botones ul:nth-child(2){
+    grid-column: 3/ span 4;
+    text-align: center;
+}
+
+.contenedor-botones .barra{
+    grid-column: 1/ span 3;   
+    padding-top: 12px;
+    box-shadow: 35px 0 white inset,
+                90px 0 rgba(188,75,81,1) inset;
+}
+
+.contenedor .cerrar button{
+    background-color: white;
+    border: 0;    
+    padding: 3px 6px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contenedor .cerrar button:hover{
+    background-color: rgb(231, 231, 231);
+}
+
+
+/*FIN POSICIONAMIENTO DE BOTONES*/
+
+.ab {
+    animation: abrir .2s normal ease-in-out forwards;
+}
+
+.ce{   
+    animation: cerrar 1s normal ease-in-out forwards ;
+}
+
+
+@keyframes abrir{
+    0%{width: 0; height: 0;}
+    100%{width: 755px; height: 400px;}
+}
+
+@keyframes cerrar{
+    0%{width: 755px; height: 400px;}
+    100%{width: 0; height: 0;}
+}
+
+/*INCIO POSICIONAMIENTO Y ESTILOS DEL FORMULARIO DE INGRESO*/
+
+.contenedor-ingreso form{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* grid-template-rows: repeat(12, .25fr); */
+    grid-template-rows: repeat(6, .25fr) .220fr .030fr repeat(5, .25fr) ;
+    grid-template-columns: repeat(8, .25fr);
+   /* text-align: center; */
+}
+
+.contenedor-registro form{
+    width: 100%;
+    height: 100%;
+    display: grid;     
+    grid-template-rows: repeat(8, .25fr) .220fr .030fr repeat(3, .25fr) ;
+    grid-template-columns: repeat(8, .25fr);
+}
+
+.contenedor-ingreso form .msjIngreso{ /**NUEVARDOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+    grid-column: 1 /  9; 
+    grid-row: 1 / span 2;
+    font-size: 11px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nombre{    
+    grid-column: 2 /  8; 
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.contraseña{
+    grid-column: 2 /  8; 
+    grid-row: 6 ;
+    display: flex;
+    justify-content: center; 
+    /* border-bottom: 2px solid rgb(133, 133, 133); */
+    box-shadow: 10px 0 white inset,
+                179px 0 rgb(133, 133, 133) inset;
+}
+
+.icono{
+    grid-column:  7; 
+    grid-row: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.boton{
+    grid-column: 2 /  8;
+    /* grid-row: 9 / 11 ; */
+    grid-row: 10;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.olvidarContra{ /**NUEVARDOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+    grid-column: 2 /  8;
+    /* grid-row: 9 / 11 ; */
+    grid-row: 12;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.olvidarContra a{ /**NUEVARDOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(66, 66, 66);
+    font-family: Arial;
+} 
+
+.olvidarContra a:hover{
+    color:rgb(191, 50, 84);
+}
+
+.contenedor-ingreso .nombre input{
+    border: 0;
+    border-bottom: 2px solid rgb(133, 133, 133);
+    /* width: 100%; */
+}
+
+.contenedor-ingreso .contraseña input{
+    width: 169px;
+    height: 23px;
+    border: 0;
+    height: 23px;
+    /* border-bottom: 2px solid rgb(133, 133, 133);  */
+    /* width: 100%; */
+} 
+
+/*contorno de los input*/
+.contenedor-ingreso .nombre input:focus{
+    outline: 0;
+    /* background: linear-gradient(to bottom, transparent, rgb(241, 132, 132)); */
+}
+
+.contenedor-ingreso .contraseña input{
+    outline: 0;
+}
+
+.contenedor-ingreso .boton input{    
+    width: 179px;
+    background-color:rgba(188,75,81,1) ;  
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}/*#AFA2FF*/
+
+.icono img{
+    cursor: pointer;
+}
+
+#mostrar{
+    display: none;
+}
+
+.recordar{
+    grid-column: 2 /  8;
+    grid-row: 7  ; 
+    text-align: center; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.recordar label{
+    font-size: 13px;
+    color: rgb(66, 66, 66);
+    font-family: Arial;
+    padding-left: 5px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+/*FIN POSICIONAMIENTO Y ESTILOS DEL FORMULARIO DE INGRESO*/
+
+/* COMIENZO POSICIONAMIENTO Y ESTILOS DEL FORMULARIO DE REGISTRO*/
+
+
+.contenedor-registro .msjRegistro{ /*NUEVOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+    grid-column: 2 /  8; 
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    color: red;   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor-registro .NyA{
+    grid-column: 2 /  8; 
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-registro .Correo{
+    grid-column: 2 /  8; 
+    grid-row: 4;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-registro .contra{
+    grid-column: 2 /  8; 
+    grid-row: 6;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 0 white inset,
+                179px 0 rgb(133, 133, 133) inset;
+}
+
+.icono_R1{
+    grid-column: 7; 
+    grid-row: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 20;
+}
+
+.icono_R1 img{
+    cursor: pointer;
+}
+
+#mostrar_R1{
+    display: none;
+}
+
+.icono_R2{
+    grid-column: 7; 
+    grid-row: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 20;
+}
+
+.icono_R2 img{
+    cursor: pointer;
+}
+
+#mostrar_R2{
+    display: none;
+}
+
+
+.contenedor-registro .contra2{
+    grid-column: 2 /  8; 
+    grid-row: 8;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 0 white inset,
+                179px 0 rgb(133, 133, 133) inset;
+
+}
+
+.contenedor-registro .terminos{
+    grid-column: 2 /  8; 
+    grid-row: 9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.contenedor-registro .bo_regis{
+    grid-column: 2 /  8; 
+    grid-row: 11 /  13;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*--------------------ESTILOS--------------------*/
+.contenedor-registro .NyA input{
+    border: 0;
+    border-bottom: 2px solid rgb(133, 133, 133);
+}
+.contenedor-registro .NyA input:focus{
+    outline: 0;
+}
+
+.contenedor-registro .Correo input{
+    border: 0;
+    border-bottom: 2px solid rgb(133, 133, 133);
+}
+
+.contenedor-registro .Correo input:focus{
+   outline: 0; 
+}
+
+.contenedor-registro .contra input{
+    width: 169px;
+    height: 23px;
+    border: 0;
+    height: 23px;
+} 
+
+.contenedor-registro .contra input:focus{
+    outline: 0;
+}
+
+.contenedor-registro .contra2 input{
+    width: 169px;
+    height: 23px;
+    border: 0;
+    height: 23px;
+} 
+
+.contenedor-registro .contra2 input:focus{
+    outline: 0;
+    
+}
+
+.terminos label{
+    font-size: 13px;
+    color: rgb(66, 66, 66);
+    font-family: Arial;
+    padding-left: 3px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.contenedor-registro .bo_regis input{    
+    width: 179px;
+    background-color: /*#AFA2FF*/  rgba(188,75,81,1) ;  
+    border: 1px solid rgb(133, 133, 133);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.verde{
+    color: green;
+}
+
+/* FIN POSICIONAMIENTO Y ESTILOS DEL FORMULARIO DE REGISTRO*/

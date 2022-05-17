@@ -1,0 +1,276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../img/FONDO.png);
+    background-size: 50%;
+    background-repeat: repeat-y;
+    background-color: #fffeec;
+}
+
+.contenedorMenu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorPrincipal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*-------INICIO MENU-------*/
+
+:root {
+    --colorFondo: #de969e;
+}
+
+.barra {
+    width: 50px;
+    height: 200px;
+    background-color: var(--colorFondo);
+    position: fixed;
+    left: 96.3%;
+    display: grid;
+    grid-template-columns: 5px 10px 20px 10px 5px;
+    grid-template-rows: 23px 51.84px 25.64px 76.52px 23px;
+    border-radius: 10px 0 0 10px;
+}
+
+.barra div:first-child {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.barra div:nth-child(2) {
+    grid-row: 4;
+    grid-column: 3;
+}
+
+.barraVolver {
+    display: inline-block;
+    position: sticky;
+    left: 86%; 
+    top: 300px;
+}
+
+.barra a {
+    color: black;
+    writing-mode: vertical-lr;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+@keyframes mostrar {
+    0%{right: 100%;}
+    100%{right: 86%;}
+}
+
+@keyframes ocultar {
+    0%{right: 86%;}
+    100%{right: 100%;}
+}
+
+
+.bienvenida{
+    position: absolute;
+    width: 200px;
+    height: 220px;
+    background-color: #de969f;
+    right: 86%; 
+    border-radius: 0 10px 10px 0; 
+    animation: 
+            mostrar .8s ease-in-out normal 0s,
+            ocultar .8s ease-in-out normal 6s forwards;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.504);
+}
+
+.bienvenida h3{
+    text-align: center;
+    line-height: 40px;
+}
+
+.bienvenida p{
+    padding-left: 20px;
+    text-align: left;
+    font-style: italic;
+    font-family: cursive;
+}
+
+.menu {
+    width: 780px;
+    height: 641px;
+    display: grid;
+    grid-template-columns: 30px 230px 15px 230px 15px 230px 30px;
+    grid-template-rows: 30px 245px 76px 245px 30px;
+    background-color: var(--colorFondo);
+}
+
+.hamburguesa {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.pizza {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.pastas {
+    grid-column: 6;
+    grid-row: 2;
+}
+
+.menu .carta {
+    grid-column: 4;
+    grid-row: 3;
+    font-family: Matilda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ensaladas {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.postres {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+.bebidas {
+    grid-column: 6;
+    grid-row: 4;
+}
+
+.hamburguesa img,
+.pizza img,
+.pastas img,
+.ensaladas img,
+.postres img,
+.bebidas img {
+    padding-top: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.hamburguesa p,
+.pizza p,
+.pastas p,
+.ensaladas p,
+.postres p,
+.bebidas p {
+    padding-top: 5px;
+    font-family: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.estilos {
+    background-color: white;
+    border-radius: 30px;
+    outline: 1px solid;
+    outline-color: rgb(133, 133, 133);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.504);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*-------FIN MENU-------*/
+
+/*-------INICIO MENU DE HAMBURGUESAS------*/
+
+.comidas {
+    max-width: 780px;
+    padding-top: 200px;
+}
+
+.comidas .listaHam {
+    text-align: center;
+    background-color: var(--colorFondo);
+    border-top: 3px solid rgba(191, 50, 83, 0.178);
+
+}
+
+@font-face {
+    font-family: Matilda;
+    src: url(../img/AmsterdamOne-eZ12l.ttf);
+}
+
+.comidas .listaHam h2 {
+    /* font-family: 'Fredoka One', cursive; */
+    /* font-family: 'Libre Baskerville', serif; */
+    font-family: Matilda;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 8rem;
+}
+
+.comidas .tabla {
+    min-width: 780px;
+    background-color: var(--colorFondo);
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgba(191, 50, 83, 0.35);
+}
+
+.tabla img {
+    width: 130px;
+    border-radius: 10px;
+}
+
+table tr,
+td,
+th {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+table tr {    
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 1px 10px rgb(0, 0, 0);
+    display: inline-flex;
+}
+
+table th,
+td {
+    padding: 5px;
+}
+
+table label {
+    align-self: center;
+}
+
+table input {
+    width: 35px;
+    margin-right: 5px;
+}
+table{
+    text-align: center;
+}
+
+/*-------FIN MENU DE HAMBURGUESAS------*/
+
+/* rgba(188,75,81,1) rgba(224,122,95,1)
+rgb(191, 50, 84)
+rgb(255, 254, 236)
+rgba(191, 50, 83, 0.504)
+*/

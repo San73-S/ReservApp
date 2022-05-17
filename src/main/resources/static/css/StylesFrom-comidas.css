@@ -1,0 +1,190 @@
+@font-face {
+    font-family: BEBAS;
+    src: url(../img/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: Kalam;
+    src: url(../img/Kalam-Regular.ttf);
+}
+
+body {
+    background: url(../img/FONDO.png);
+    background-size: 50%;
+    background-repeat: repeat-y;
+    background-color: #fffeec;
+}
+.contenedorBarra{ /*NUEVO*/
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorPrincipal{ /*NUEVO*/
+    position: absolute;
+    width: 35%;
+    height: 30px;
+    background-color: #de969e;
+    box-shadow: 0px 0px 10px rgba(46, 46, 46, 0.504);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 100px;
+}
+
+.contenedorPrincipal  ul li{ /*NUEVO*/
+    display: inline-block;   
+    padding: 0 20px; 
+    line-height: 20px;
+    border-radius: 10px;
+}
+
+.contenedorPrincipal  ul li a{ /*NUEVO*/
+    text-decoration: none;
+    color: rgb(191, 50, 84);
+    font-family: BEBAS;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.contenedorPrincipal ul li:hover{ /*NUEVO*/
+    background-color: #ffffffe5;
+}
+
+/*Bar*/
+
+.Principal{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+   }
+
+.caja{
+ width: 450px;
+height: 600px;
+border-color: rgba(0, 0, 0, 0);
+border: 50px;
+background-color:#de969e;
+display: flex;
+justify-content: center;
+text-align: center;
+font-family: Kalam;
+letter-spacing: 2px;
+border-radius: 50px;
+}
+.text-aling{
+ text-align: center;
+}
+
+.text{
+    text-align: center;
+    font-size: 25px;
+}
+.titulo{
+     font-size: 20px;
+    font-family:Kalam;
+    letter-spacing: 1PX;
+}
+
+   .gen{
+       border: 1px solid black;
+       background-color:rgb(191, 50, 84);
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 700px;
+    color: white;
+    box-shadow: 0,0,30px rgba(0, 0, 0, 0.568);
+    transition: 0.5s ease-in;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-family: BEBAS;
+    letter-spacing: 2px;
+   }
+   .gene{
+     border: 1px solid black; 
+    background-color:rgb(191, 50, 84);
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 700px;
+    color: white;
+    box-shadow: 0,0,30px rgba(0, 0, 0, 0.568);
+    transition: 0.5s ease-in;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-family: BEBAS;
+   }
+.category{
+width: 250px;
+height: 30px;
+}
+
+.gen{
+    border: 1px solid white;
+     background-color:rgb(191, 50, 84);
+    padding: 8px;
+    font-size: 15px;
+    color: white;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-family: BEBAS;
+    letter-spacing: 2px;
+    margin-block-end: 40px;
+   }
+   .gene{
+     border: 1px solid white; 
+    background-color:rgb(191, 50, 84);
+    padding: 8px;
+    font-size: 15px;
+    color: white;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-family: BEBAS;
+      }
+    .gen:hover{
+        transition: all .4s;
+       background-color:rgba(222, 150, 159, 0.678);
+       } 
+       .gene:hover{
+        transition: all .4s;
+       background-color: rgba(222, 150, 159, 0.678);
+       } 
+    #file{
+        display: none;
+    }
+
+.foto{
+    display:flex;
+     justify-content: center;
+    width: 390px;
+    border: 1px solid black; 
+    background-color:rgb(191, 50, 84);
+    padding: 8px;
+    font-size: 25px;
+    color: black;
+    border-radius: 12px;
+    font-family: BEBAS;
+   }
+   .foto:hover{
+        transition: all .4s;
+       background-color:rgba(222, 150, 159, 0.678);
+   }
+   .fotoC{
+text-align: center;
+display: flex;
+justify-content: center;
+   }
+
+/* .file imput{
+    display:none;
+}
+.file label{
+display: block;
+padding: 8px 21px;
+border: 1px solid black; 
+ background-color:rgb(191, 50, 84);
+border-radius: 6px;
+} */

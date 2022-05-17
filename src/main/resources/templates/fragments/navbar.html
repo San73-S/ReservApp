@@ -1,0 +1,19 @@
+<nav class="navigation" >
+    <ul>        
+        <li>
+              <a th:href="@{/menu}"><img src="img/menu.png" class="menu">Menú</a>
+        </li>   
+        <li>
+              <a th:href="@{/reserva}"><img src="img/reserva.png" class="reserva">Reserva</a>
+        </li> 
+        <li sec:authorize="!isAuthenticated()">
+            <a th:href="@{/login}"><img src="img/iniciarsesion.png" class="iniciarsesion">Cuenta</a>
+        </li>
+		<li sec:authorize="hasRole('ADMIN')">
+            <a th:href="@{/menu/agregar}"><img src="img/carrito.png" class="carrito">Agregar comida</a>
+        </li> 
+        <li sec:authorize="isAuthenticated()">
+            <a th:href="@{/logout}"><img src="img/log-out.png" class="reserva">Salir</a>
+        </li>   
+    </ul>
+</nav>  

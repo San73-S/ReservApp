@@ -1,0 +1,201 @@
+video{
+    align-content: center;
+    width: 100%;
+}
+@font-face {
+    font-family:Matilda;
+    src: url(../img/AmsterdamOne-eZ12l.ttf);
+}
+@font-face {
+    font-family: BEBAS;
+    src: url(../img/BebasNeue-Regular.ttf);
+}
+.logo{
+    position: static;
+    z-index: 999;
+    height: auto;
+    width: auto;
+  height: 190px;
+  width: 190px;
+}
+.iniciarsesion{
+    height: auto;
+    width: auto;
+    max-height: 25px;
+    max-width: 25px;
+}
+.registrarse{
+    height: auto;
+    width: auto;
+    max-width: 25px;
+    max-height: 25px;
+}
+.carrito{
+    height: auto;
+    width: auto;
+    max-width: 25px;
+    max-height: 25px;
+
+}
+.menu{
+     height: auto;
+    width: auto;
+    max-width: 25px;
+    max-height: 25px;}
+
+.reserva{ 
+        height: auto;
+        width: auto;
+        max-width: 25px;
+        max-height: 25px;}
+    
+body{
+    position: static;
+    font-family: BEBAS;
+    color: rgb(191, 50, 84);
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin: 0;
+    background: url(../img/FONDO.png);
+    background-size: 50% 50%;
+    background-repeat: repeat-y;
+    letter-spacing: 2px;
+}
+h1{
+    position: static;
+    font-family: Matilda;
+    font-size: 2rem;
+    line-height: 4rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+.main p{ 
+    position: static;
+    color: rgb(191, 50, 84);
+    font-style: italic;
+    font-family: cursive;
+    text-indent: 20px;
+    text-align: left;
+    font-weight: bolder;
+    align-content: left;
+    position: relative;
+    margin-bottom: 1.6em;
+    text-decoration:none
+}
+.container{
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+.header{ 
+    background: rgba(191, 50, 83, 0.178);
+    color: rgb(255, 254, 236);
+    padding: 0.25rem 0;
+}
+    
+.header a{
+    position: static;
+    letter-spacing: 0.4px;
+    color: rgb(191, 50, 84);
+    font-family: BEBAS;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bolder;
+}
+.logo-nav-container{
+    text-align:center;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.navigation{
+margin-left: 5px;
+margin-top: 5px;
+margin-right: 5px;
+position: relative;
+z-index: 20;
+}
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+
+}
+.navigation ul li{
+    display: inline-block;
+
+}
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+.navigation ul li a:hover{
+background-color: #ffffffe5
+}
+/*Bar*/
+.contenedore {
+    font-family: KalamRegular;
+    background-color: rgba(191, 50, 83, 0.504);
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 320;
+}
+.contenedore img {
+    width: 30px;
+    height: 30px;
+}
+.lugar img:hover{
+    transform: scale(2,2);
+    
+    }
+
+.contenedora {
+ margin-bottom: 50px;
+ margin-left:  10px;
+}
+.contenedora p{
+color: black;
+}
+.contenedora img {
+    width: 25px;
+    height: 25px;
+}
+.map{
+    display: flex;
+    margin-bottom:  15x;
+    margin-right: 10px;
+    box-shadow:#ffffffe5;
+}
+.mapi {
+  margin-top: 10px;
+}
+
+.horario {
+    text-align: center;
+    display: flex;
+ justify-content: center;
+    color: black;
+    font-size: 20px;
+       margin-top: 45px;
+       margin-right: 35px;
+}
+.tele{
+    display: flex;
+    flex-direction:inherit;
+     margin-right:   50px;
+    letter-spacing: 6px;
+}
+.lugar {
+   display: flex;
+   flex-direction: column;
+   margin-right: 40px;
+   margin-top: 60px;
+    }
