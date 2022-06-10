@@ -4,7 +4,7 @@
               <a th:href="@{/menu}"><img src="img/menu.png" class="menu">Menú</a>
         </li>   
         <li>
-              <a th:href="@{/reservas}"><img src="img/reserva.png" class="reserva">Mis Reservas</a>
+              <a th:href="@{/reserva}"><img src="img/reserva.png" class="reserva">Reserva</a>
         </li> 
         <li sec:authorize="!isAuthenticated()">
             <a th:href="@{/login}"><img src="img/iniciarsesion.png" class="iniciarsesion">Cuenta</a>

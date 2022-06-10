@@ -1,16 +1,10 @@
 package com.ReservApp.spring.controladores;
 
-import com.ReservApp.spring.entidades.Reserva;
-import com.ReservApp.spring.entidades.Usuario;
-import com.ReservApp.spring.servicios.ReservaServicios;
 import com.ReservApp.spring.servicios.UsuarioServicios;
-import java.util.List;
-import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,9 +16,6 @@ public class MainController {
     
     @Autowired
     private UsuarioServicios userServ;
-    
-    @Autowired
-    private ReservaServicios reserServ;
     
     @GetMapping("/index")
     public String index(){
@@ -52,23 +43,6 @@ public class MainController {
             modelo.put("RgError", e.getMessage());  
             modelo.put("noExito", "Registro Fallido.");  
             return "login";
-        }
-    }
-    
-    @GetMapping("/reservas")
-    public String misReservas(ModelMap modelo, HttpSession session){
-        Usuario usuario=(Usuario) session.getAttribute("usuariosession");
-        List<Reserva> r = reserServ.findAllByUserId(usuario.getId());
-        modelo.put("reservas", r);
-        return "reservas";
-    }
-    @GetMapping("reservas/cancelar/{id}")
-    public String cancelarReserva(@PathVariable Integer id){
-        try {
-            reserServ.cancelarReserva(id);
-            return "redirect:/reservas";
-        } catch (Exception e) {
-            return "redirect:/reservas";
         }
     }
     
