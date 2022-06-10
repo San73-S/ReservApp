@@ -38,7 +38,7 @@ public class ReservaController {
         try {
             Usuario usuario=(Usuario) session.getAttribute("usuariosession");
             reservaServ.save(usuario.getId(), dia, turno);
-            return "index";
+            return "redirect:/reservas";
         } catch(Exception e){
            // e.printStackTrace();
             modelo.put("reservError", e.getMessage()); 

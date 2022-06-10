@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/StylesEliminar.css">
+        <title>Comidas</title>
+    </head>
+
+    <body>
+        <div class="contenedorBarra">
+            <!-- NUEVO -->
+            <nav class="contenedorPrincipal">
+                <ul>
+                    <li><a th:href="@{/}">Inicio</a> </li>
+                    <li><a th:href="@{/reserva}">Reservar</a></li>
+                    <li><a th:href="@{/menu}">Menú</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="conPrinci">
+            <div class="volver"  >
+                <header class="titulo row justify-content-center">  <h3> Reservas</h3>   </header>
+                
+                <table class="table  mt-5">
+                    <thead>
+                        <tr>
+                            
+                            <th class="caja"> Reserva Nro </th>
+                            <th class="caja"> Cliente </th>
+                            <th class="caja"> Día </th>
+                            <th class="caja"> Turno </th>
+                            <th class="caja"> Cancelar Reserva</th>
+                                            
+                        </tr>
+                    </thead>
+
+                    <tbody th:each="reserva : ${reservas}">
+                        <div>
+                            <tr> 
+                                <td  class="tr" th:text="${reserva.id}"></td>
+                                <td class="tr" th:text="${reserva.cliente.nombre}"></td>
+                                <td class="tr" th:text="${#dates.format(reserva.dia, 'dd/MM/yyyy')}"></td>
+                                <td class="tr" th:text="${reserva.turno}"></td>
+                                <td class="tr">
+                                    <a th:href="@{/reservas/cancelar/__${reserva.id}__}" class="btn btn-block gen"> Cancelar </a>
+                                </td>
+                                </div>
+                                
+                            </tr>
+                        </div>
+
+                    </tbody>                
+                </table>
+                <div style="height: 48px;padding-top: 20px;">
+                    <a th:href="@{/reserva}" class="btn btn-block gen" > NUEVA RESERVA </a>     
+                </div>   
+            </div> 
+                           
+        </div>     
+ </body>
+
+</html>

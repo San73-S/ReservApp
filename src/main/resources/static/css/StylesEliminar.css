@@ -68,8 +68,9 @@ body {
     border-radius: 50px; 
     letter-spacing: 2px;
 }
-.tr{
-   
+tr{
+    
+    height: 48px;
 }
 .table tr{
 border-bottom:5px solid rgb(191, 50, 84);

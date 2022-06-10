@@ -47,5 +47,12 @@ public class ReservaServicios {
             throw new Exception("No hay más reservas diponibles para este horario!");
         
     }
+    
+    public List<Reserva> findAllByUserId(Integer userID){
+        return reservaRepo.findAllByUserId(userID);
+    }
 
+    public void cancelarReserva(Integer id){
+        reservaRepo.deleteById(id);
+    }
 }
